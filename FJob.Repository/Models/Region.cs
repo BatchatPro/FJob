@@ -7,6 +7,7 @@ public class Region:BaseEntity
 {
     public int Id { get; set; }
     public string Name { get; set; }
+
     [AllowNull]
     public List<District>? Districts { get; set; }
 }

@@ -7,9 +7,9 @@ namespace FJob.Access.Models;
 public class User : IdentityUser
 {
     [AllowNull]
-    public string? LastName { get; set; }
-    [AllowNull]
     public string? FirstName { get; set; }
+    [AllowNull]
+    public string? LastName { get; set; }
     [AllowNull]
     public string? MiddleName { get; set; }
     public string Location { get; set; }
