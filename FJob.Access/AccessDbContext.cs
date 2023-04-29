@@ -13,16 +13,16 @@ public class AccessDbContext : IdentityDbContext<User, Role, string>
         Database.Migrate();
     }
 
-    // DbSets
-    public DbSet<DistrictReference> DistrictReferences { get; set; }
+    //// DbSets
+    //public DbSet<DistrictReference> DistrictReferences { get; set; }
 
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
-    {
-        modelBuilder.Entity<DistrictReference>()
-            .ToTable("District", t => t.ExcludeFromMigrations());
-    }
+    //protected override void OnModelCreating(ModelBuilder modelBuilder)
+    //{
+    //    modelBuilder.Entity<DistrictReference>()
+    //        .ToTable("District", t => t.ExcludeFromMigrations());
+    //}
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-    }
+    //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    //{
+    //}
 }

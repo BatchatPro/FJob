@@ -1,8 +1,6 @@
-﻿using FJob.Domain;
+﻿namespace FJob.Access.Models.RepositoryReferences;
 
-namespace FJob.Access.Models.RepositoryReferences;
-
-public class DistrictReference:BaseEntity
+public class DistrictReference
 {
     public int Id { get; set; }
     public string Name { get; set; }
