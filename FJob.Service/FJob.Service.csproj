@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FJob.Repository\FJob.Repository.csproj" />
+    <ProjectReference Include="..\FJob.Shared\FJob.Shared.csproj" />
+  </ItemGroup>
+
+</Project>
