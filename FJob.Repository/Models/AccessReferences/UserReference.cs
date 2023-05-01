@@ -13,4 +13,6 @@ public class UserReference : IdentityUser
     public string? MiddleName { get; set; }
     public string Location { get; set; }
     public DateTime BirthDate { get; set; }
+
+    public ICollection<UserSocialLink> UserSocialLinks { get; set; }
 }

@@ -9,6 +9,7 @@ public class District:BaseEntity
 
     public int RegionId { get; set; } 
 
+    public ICollection<Job> Jobs { get; set; }
     public Region Region { get; set; }
 
 }

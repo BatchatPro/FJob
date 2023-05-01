@@ -6,4 +6,6 @@ public class DistrictReference
     public string Name { get; set; }
     public int RegionId { get; set; }
 
+    public ICollection<User> Users { get; set; }
+
 }
