@@ -104,37 +104,6 @@ namespace FJob.Repository.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Workers",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    CategoryId = table.Column<int>(type: "integer", nullable: false),
-                    CreateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    UpdateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    CreatedBy = table.Column<string>(type: "text", nullable: true),
-                    UpdatedBy = table.Column<string>(type: "text", nullable: true),
-                    MinSalary = table.Column<string>(type: "text", nullable: false),
-                    MaxSalary = table.Column<string>(type: "text", nullable: false),
-                    Deadline = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    Demand = table.Column<string>(type: "text", nullable: false),
-                    MoreInfo = table.Column<string>(type: "text", nullable: false),
-                    WorkingTime = table.Column<string>(type: "text", nullable: false),
-                    CallTime = table.Column<string>(type: "text", nullable: false),
-                    Status = table.Column<string>(type: "text", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Workers", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Workers_Categories_CategoryId",
-                        column: x => x.CategoryId,
-                        principalTable: "Categories",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Districts",
                 columns: table => new
                 {
@@ -232,6 +201,44 @@ namespace FJob.Repository.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Workers",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    DistrictId = table.Column<int>(type: "integer", nullable: false),
+                    CategoryId = table.Column<int>(type: "integer", nullable: false),
+                    CreateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    UpdateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    CreatedBy = table.Column<string>(type: "text", nullable: true),
+                    UpdatedBy = table.Column<string>(type: "text", nullable: true),
+                    MinSalary = table.Column<string>(type: "text", nullable: false),
+                    MaxSalary = table.Column<string>(type: "text", nullable: false),
+                    Deadline = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    Demand = table.Column<string>(type: "text", nullable: false),
+                    MoreInfo = table.Column<string>(type: "text", nullable: false),
+                    WorkingTime = table.Column<string>(type: "text", nullable: false),
+                    CallTime = table.Column<string>(type: "text", nullable: false),
+                    Status = table.Column<string>(type: "text", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Workers", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Workers_Categories_CategoryId",
+                        column: x => x.CategoryId,
+                        principalTable: "Categories",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Workers_Districts_DistrictId",
+                        column: x => x.DistrictId,
+                        principalTable: "Districts",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Districts_RegionId",
                 table: "Districts",
@@ -256,6 +263,11 @@ namespace FJob.Repository.Migrations
                 name: "IX_Workers_CategoryId",
                 table: "Workers",
                 column: "CategoryId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Workers_DistrictId",
+                table: "Workers",
+                column: "DistrictId");
         }
 
         /// <inheritdoc />
@@ -277,13 +289,13 @@ namespace FJob.Repository.Migrations
                 name: "Workers");
 
             migrationBuilder.DropTable(
-                name: "Districts");
-
-            migrationBuilder.DropTable(
                 name: "SocialLink");
 
             migrationBuilder.DropTable(
                 name: "Categories");
+
+            migrationBuilder.DropTable(
+                name: "Districts");
 
             migrationBuilder.DropTable(
                 name: "Regions");

@@ -11,5 +11,6 @@ public class WorkerMap : BaseEntityConfiguration<Worker>
     {
         base.Configure(builder);
         builder.HasOne(x => x.Category).WithMany(x => x.Workers);
+        builder.HasOne(x => x.District).WithMany(x => x.Workers);
     }
 }

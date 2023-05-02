@@ -7,7 +7,7 @@ public class RoleInitializer
 {
     public static async Task InitializeAsync(UserManager<User> userManager, RoleManager<Role> roleManager)
     {
-        string adminEmail = "goblindev02@gmial.com";
+        string adminEmail = "goblindev02@gmail.com";
         string adminPassword = "12345678dev";
 
         var roles = new Dictionary<string, string>()
@@ -27,7 +27,6 @@ public class RoleInitializer
         if (user != null)
         {
             await userManager.AddToRolesAsync(user, new string[] { RoleConst.ADMIN });
-            await userManager.AddToRolesAsync(user, new string[] { RoleConst.NEWUSER });
             await userManager.AddToRolesAsync(user, new string[] { RoleConst.EMPLOYER });
             await userManager.AddToRolesAsync(user, new string[] { RoleConst.EMPLOYEE });
             await userManager.AddToRolesAsync(user, new string[] { RoleConst.SUPERVISOR });

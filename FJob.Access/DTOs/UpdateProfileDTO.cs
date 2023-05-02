@@ -3,10 +3,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace FJob.Access.DTOs;
 
-public class RegistrationDTO
+public class UpdateProfileDTO
 {
     [Required(ErrorMessage = "This Poly is Required.")]
-    public string UserName { get; set; }
+    public string Id { get; set; }
 
     [Required(ErrorMessage = "This Poly is Required.")]
     [StringLength(100, ErrorMessage = "Minimum Length = 8 !", MinimumLength = 8)]
@@ -38,10 +38,4 @@ public class RegistrationDTO
 
     [AllowNull]
     public string? Email { get; set; }
-
-    [Required(ErrorMessage = "This Poly is Required.")]
-    public string Role { get; set; }
-
-    //[Required(ErrorMessage = "This Poly is Required.")]
-    //public int DistrictId { get; set; }
 }

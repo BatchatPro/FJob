@@ -11,7 +11,6 @@ public class Job: BaseJob
     public string MaxAge { get; set; } 
     public string Gender { get; set; }
 
-
     public int DistrictId { get; set; }
     public int CategoryId { get; set; }
     public District District { get; set; }

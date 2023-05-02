@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace FJob.Repository.Migrations
 {
     [DbContext(typeof(FJobDbContext))]
-    [Migration("20230501135928_001")]
+    [Migration("20230502143045_001")]
     partial class _001
     {
         /// <inheritdoc />
@@ -449,6 +449,9 @@ namespace FJob.Repository.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<int>("DistrictId")
+                        .HasColumnType("integer");
+
                     b.Property<string>("MaxSalary")
                         .IsRequired()
                         .HasColumnType("text");
@@ -478,6 +481,8 @@ namespace FJob.Repository.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
+
+                    b.HasIndex("DistrictId");
 
                     b.ToTable("Workers");
                 });
@@ -539,7 +544,15 @@ namespace FJob.Repository.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("FJob.Repository.Models.District", "District")
+                        .WithMany("Workers")
+                        .HasForeignKey("DistrictId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Category");
+
+                    b.Navigation("District");
                 });
 
             modelBuilder.Entity("FJob.Repository.Models.AccessReferences.UserReference", b =>
@@ -557,6 +570,8 @@ namespace FJob.Repository.Migrations
             modelBuilder.Entity("FJob.Repository.Models.District", b =>
                 {
                     b.Navigation("Jobs");
+
+                    b.Navigation("Workers");
                 });
 
             modelBuilder.Entity("FJob.Repository.Models.Region", b =>

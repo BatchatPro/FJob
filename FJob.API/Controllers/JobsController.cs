@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace FJob.API.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("job/[controller]")]
 public class JobsController : ControllerBase
 {
     private readonly FJobDbContext _context;
@@ -19,7 +19,7 @@ public class JobsController : ControllerBase
     }
 
     [HttpGet(Name = "GetText")]
-    public string Get()
+    public string GetText()
     {
         return "Salom, barchasi juda a'lo darajada ishlayapti.";
     }
