@@ -35,6 +35,8 @@ public class UpdateProfileDTO
     public DateTime BirthDate { get; set; }
     [Required(ErrorMessage = "This Poly is Required.")]
     public string PhoneNumber { get; set; }
+    [Required(ErrorMessage = "This Poly is Required.")]
+    public string Gender { get; set; }
 
     [AllowNull]
     public string? Email { get; set; }

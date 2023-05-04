@@ -28,6 +28,9 @@ public class UserDTO
     [Required(ErrorMessage = "This Field Requider!")]
     public DateTime BirthDate { get; set; }
 
+    [Required(ErrorMessage = "This Field Requider!")]
+    public string Gender { get; set; }
+
     [AllowNull]
     public string? Email { get; set; }
 }

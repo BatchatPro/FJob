@@ -6,9 +6,9 @@ public class BaseEntity
 {
     public int Id { get; set; }
     [AllowNull]
-    public DateTime? CreateDate { get; set; } = DateTime.Now;
+    public DateTime CreateDate { get; set; } = DateTime.Now;
     [AllowNull]
-    public DateTime? UpdateDate { get; set; }
+    public DateTime UpdateDate { get; set; }
     [AllowNull]
     public string? CreatedBy { get; set; }
     [AllowNull]

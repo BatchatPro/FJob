@@ -22,7 +22,6 @@ public class ContactController : ControllerBase
     [Route("Contact/GetAllContacts")]
     public async Task<ActionResult<IEnumerable<ContactDTO>>> GetAllContacts() => Ok((await _context.Contacts.ToListAsync()).ConvertToDTO());
 
-
     [HttpGet]
     [Route("Contact/GetContactById/{id}")]
     public async Task<ActionResult<ContactDTO>> GetContactById(int id)
@@ -32,9 +31,8 @@ public class ContactController : ControllerBase
         return (contact == null) ? NotFound() : contact.ConvertToDTO();
     }
 
-
     [HttpPost]
-    [Route("contact/Createcontact")]
+    [Route("Contact/CreateContact")]
     public async Task<ActionResult<ContactDTO>> CreateContact([FromBody] ContactDTO contact)
     {
         if (contact == null) return BadRequest();
@@ -69,5 +67,4 @@ public class ContactController : ControllerBase
 
         return Ok(contact);
     }
-
 }

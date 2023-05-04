@@ -61,7 +61,8 @@ public class AdmintrationController : ControllerBase
                 MiddleName = userDTO.MiddleName,
                 PhoneNumber = userDTO.PhoneNumber,
                 Location = userDTO.Location,
-                BirthDate = userDTO.BirthDate
+                BirthDate = userDTO.BirthDate,
+                Gender = userDTO.Gender,
             };
             var result = await _userManager.CreateAsync(user, userDTO.Password);
 
@@ -174,6 +175,7 @@ public class AdmintrationController : ControllerBase
         user.Email = userDTO.Email;
         user.BirthDate = userDTO.BirthDate;
         user.Location = userDTO.Location;
+        user.Gender = userDTO.Gender;
 
         var result = await _userManager.UpdateAsync(user);
         if (!result.Succeeded)

@@ -14,6 +14,7 @@ public class User : IdentityUser
     public string? MiddleName { get; set; }
     public string Location { get; set; }
     public DateTime BirthDate { get; set; }
+    public string Gender { get; set; }
 
     //public int DistrictId { get; set; }
     //public DistrictReference District { get; set; }

@@ -20,8 +20,8 @@ namespace FJob.Repository.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Title = table.Column<string>(type: "text", nullable: false),
                     Description = table.Column<string>(type: "text", nullable: false),
-                    CreateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    UpdateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    CreateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    UpdateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     CreatedBy = table.Column<string>(type: "text", nullable: true),
                     UpdatedBy = table.Column<string>(type: "text", nullable: true)
                 },
@@ -38,11 +38,7 @@ namespace FJob.Repository.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Theme = table.Column<string>(type: "text", nullable: false),
                     MoreInfo = table.Column<string>(type: "text", nullable: false),
-                    PhoneNumber = table.Column<string>(type: "text", nullable: false),
-                    CreateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    UpdateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    CreatedBy = table.Column<string>(type: "text", nullable: true),
-                    UpdatedBy = table.Column<string>(type: "text", nullable: true)
+                    PhoneNumber = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -58,8 +54,8 @@ namespace FJob.Repository.Migrations
                     Title = table.Column<string>(type: "text", nullable: false),
                     Description = table.Column<string>(type: "text", nullable: false),
                     ViewsCount = table.Column<int>(type: "integer", nullable: false),
-                    CreateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    UpdateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    CreateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    UpdateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     CreatedBy = table.Column<string>(type: "text", nullable: true),
                     UpdatedBy = table.Column<string>(type: "text", nullable: true)
                 },
@@ -75,8 +71,8 @@ namespace FJob.Repository.Migrations
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Name = table.Column<string>(type: "text", nullable: false),
-                    CreateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    UpdateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    CreateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    UpdateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     CreatedBy = table.Column<string>(type: "text", nullable: true),
                     UpdatedBy = table.Column<string>(type: "text", nullable: true)
                 },
@@ -93,8 +89,8 @@ namespace FJob.Repository.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Name = table.Column<string>(type: "text", nullable: false),
                     Url = table.Column<string>(type: "text", nullable: false),
-                    CreateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    UpdateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    CreateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    UpdateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     CreatedBy = table.Column<string>(type: "text", nullable: true),
                     UpdatedBy = table.Column<string>(type: "text", nullable: true)
                 },
@@ -111,8 +107,8 @@ namespace FJob.Repository.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Name = table.Column<string>(type: "text", nullable: false),
                     RegionId = table.Column<int>(type: "integer", nullable: false),
-                    CreateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    UpdateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    CreateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    UpdateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     CreatedBy = table.Column<string>(type: "text", nullable: true),
                     UpdatedBy = table.Column<string>(type: "text", nullable: true)
                 },
@@ -135,8 +131,8 @@ namespace FJob.Repository.Migrations
                     SocialLinkId = table.Column<int>(type: "integer", nullable: false),
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    CreateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    UpdateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    CreateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    UpdateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     CreatedBy = table.Column<string>(type: "text", nullable: true),
                     UpdatedBy = table.Column<string>(type: "text", nullable: true)
                 },
@@ -171,8 +167,8 @@ namespace FJob.Repository.Migrations
                     Gender = table.Column<string>(type: "text", nullable: false),
                     DistrictId = table.Column<int>(type: "integer", nullable: false),
                     CategoryId = table.Column<int>(type: "integer", nullable: false),
-                    CreateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    UpdateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    CreateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    UpdateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     CreatedBy = table.Column<string>(type: "text", nullable: true),
                     UpdatedBy = table.Column<string>(type: "text", nullable: true),
                     MinSalary = table.Column<string>(type: "text", nullable: false),
@@ -209,8 +205,8 @@ namespace FJob.Repository.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     DistrictId = table.Column<int>(type: "integer", nullable: false),
                     CategoryId = table.Column<int>(type: "integer", nullable: false),
-                    CreateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    UpdateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    CreateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    UpdateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     CreatedBy = table.Column<string>(type: "text", nullable: true),
                     UpdatedBy = table.Column<string>(type: "text", nullable: true),
                     MinSalary = table.Column<string>(type: "text", nullable: false),

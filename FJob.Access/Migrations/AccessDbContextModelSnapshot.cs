@@ -77,6 +77,10 @@ namespace FJob.Access.Migrations
                     b.Property<string>("FirstName")
                         .HasColumnType("text");
 
+                    b.Property<string>("Gender")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<string>("LastName")
                         .HasColumnType("text");
 

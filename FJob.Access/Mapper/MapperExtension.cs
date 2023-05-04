@@ -20,7 +20,8 @@ public static class MapperExtension
             MiddleName = user.MiddleName,
             PhoneNumber = user.PhoneNumber,
             Location = user.Location,
-            BirthDate = user.BirthDate
+            BirthDate = user.BirthDate,
+            Gender = user.Gender
         };
     }
     
@@ -38,7 +39,8 @@ public static class MapperExtension
             MiddleName = userDTO.MiddleName,
             PhoneNumber = userDTO.PhoneNumber,
             Location = userDTO.Location,
-            BirthDate = userDTO.BirthDate
+            BirthDate = userDTO.BirthDate,
+            Gender = userDTO.Gender
         };
     }
 
@@ -53,7 +55,8 @@ public static class MapperExtension
             MiddleName = user.MiddleName,
             PhoneNumber = user.PhoneNumber,
             Location = user.Location,
-            BirthDate = user.BirthDate
+            BirthDate = user.BirthDate,
+            Gender = user.Gender
         });
 
     public static IEnumerable<User> ConvertToDTO(this IEnumerable<User> users) =>
@@ -67,7 +70,8 @@ public static class MapperExtension
             MiddleName = user.MiddleName,
             PhoneNumber = user.PhoneNumber,
             Location = user.Location,
-            BirthDate = user.BirthDate
+            BirthDate = user.BirthDate,
+            Gender = user.Gender
         });
 
 

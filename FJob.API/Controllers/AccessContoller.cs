@@ -53,6 +53,7 @@ public class AccessController : Controller
                 userId = user.Id,
                 email = user.Email,
                 userName = user.UserName,
+                gender = user.Gender,
                 firstName = user.FirstName,
                 lastName = user.LastName,
                 middleName = user.MiddleName,
@@ -98,7 +99,8 @@ public class AccessController : Controller
             MiddleName = model.MiddleName,
             PhoneNumber = model.PhoneNumber,
             Location = model.Location,
-            BirthDate = model.BirthDate
+            BirthDate = model.BirthDate,
+            Gender = model.Gender
         };
         var result = await _userManager.CreateAsync(newUser, model.Password);
         if (result.Succeeded)

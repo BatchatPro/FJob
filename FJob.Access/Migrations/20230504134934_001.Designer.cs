@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace FJob.Access.Migrations
 {
     [DbContext(typeof(AccessDbContext))]
-    [Migration("20230502142957_001")]
+    [Migration("20230504134934_001")]
     partial class _001
     {
         /// <inheritdoc />
@@ -78,6 +78,10 @@ namespace FJob.Access.Migrations
                         .HasColumnType("boolean");
 
                     b.Property<string>("FirstName")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Gender")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("LastName")

@@ -3,7 +3,7 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace FJob.Shared;
 
-public class JobDTO
+public class WorkerDTO
 {
     public int Id { get; set; }
     [Required(ErrorMessage = "Minimum Salery is required")]
@@ -12,9 +12,9 @@ public class JobDTO
     public string MaxSalary { get; set; }
     [Required(ErrorMessage = "Deadline is required")]
     public DateTime Deadline { get; set; }
-    [Required(ErrorMessage = "CreateDate is required")]
+    [Required(ErrorMessage = "Create Date is required")]
     public DateTime CreateDate { get; set; }
-    [Required(ErrorMessage = "UpdateDate is required")]
+    [Required(ErrorMessage = "Update Date is required")]
     public DateTime UpdateDate { get; set; }
     [Required(ErrorMessage = "Demand is required")]
     public string Demand { get; set; }
@@ -26,16 +26,9 @@ public class JobDTO
     public string CallTime { get; set; }
     [Required(ErrorMessage = "Status is required")]
     public string Status { get; set; }
-    [Required(ErrorMessage = "Title is required")]
-    public string Title { get; set; }
-    [Required(ErrorMessage = "Benefit is required")]
-    public string Benefit { get; set; }
     [Required(ErrorMessage = "Location is required")]
     public string Location { get; set; }
-    [Required(ErrorMessage = "Minimum Age is required")]
-    public string MinAge { get; set; }
-    [Required(ErrorMessage = "Maximum Age is required")]
-    public string MaxAge { get; set; }
+    public int Age { get; set; }
     [Required(ErrorMessage = "Gender is required")]
     public string Gender { get; set; }
 
@@ -47,4 +40,5 @@ public class JobDTO
     public int DistrictId { get; set; }
     [AllowNull]
     public int CategoryId { get; set; }
+
 }
