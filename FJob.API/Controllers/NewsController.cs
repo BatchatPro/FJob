@@ -38,7 +38,7 @@ public class NewsController : ControllerBase
     public async Task<ActionResult<NewsDTO>> CreateNews([FromBody] NewsDTO news)
     {
         if (news == null) return BadRequest();
-
+        news.CreateDate = DateTime.Now;
         _context.News.Add(news.ConvertToEntity());
         await _context.SaveChangesAsync();
         return CreatedAtAction(nameof(GetNewsById), new { id = news.Id }, news);
@@ -62,8 +62,10 @@ public class NewsController : ControllerBase
     [Route("News/UpdateNews")]
     public async Task<ActionResult<NewsDTO>> UpdateNews([FromBody] NewsDTO news)
     {
-        if (!_context.News.Any(e => e.Id == news.Id))
+        var news_base = await _context.News.FindAsync(news.Id);
+        if (news_base == null)
             return NotFound();
+        news.CreateDate = news_base.CreateDate;
         _context.News.Update(news.ConvertToEntity());
         await _context.SaveChangesAsync();
 
