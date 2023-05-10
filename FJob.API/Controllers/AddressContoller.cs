@@ -12,13 +12,13 @@ namespace FJob.API.Controllers;
 [Authorize]
 [Route("api/[controller]")]
 [ApiController]
-public class AddressContoller : ControllerBase
+public class AddressController : ControllerBase
 {
     private readonly FJobDbContext _context;
     private readonly UserManager<User> _userManager;
     private readonly RoleManager<Role> _roleManager;
 
-    public AddressContoller(UserManager<User> userManager, RoleManager<Role> roleManager, FJobDbContext context)
+    public AddressController(UserManager<User> userManager, RoleManager<Role> roleManager, FJobDbContext context)
     {
         _userManager = userManager;
         _roleManager = roleManager;
