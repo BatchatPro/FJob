@@ -42,7 +42,9 @@ public class RoleInitializer
                 PhoneNumber = "+998932505255",
                 Email = adminEmail,
                 UserName = adminEmail,
-                Location = "Buyuk Ipak Yo'li Metrosi Yonida."
+                Location = "Buyuk Ipak Yo'li Metrosi Yonida.",
+                Gender = "Male",
+                BirthDate = new DateTime(2002, 06, 17),
             };
             IdentityResult result = await userManager.CreateAsync(user,adminPassword);
             if (result.Succeeded)
