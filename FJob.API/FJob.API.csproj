@@ -28,4 +28,8 @@
     <ProjectReference Include="..\FJob.Shared\FJob.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\Upload\JobCategory\" />
+  </ItemGroup>
+
 </Project>
