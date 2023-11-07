@@ -23,6 +23,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FJob.Access\FJob.Access.csproj" />
+    <ProjectReference Include="..\FJOB.Infrastructure\FJOB.Infrastructure.csproj" />
     <ProjectReference Include="..\FJob.Repository\FJob.Repository.csproj" />
     <ProjectReference Include="..\FJob.Service\FJob.Service.csproj" />
     <ProjectReference Include="..\FJob.Shared\FJob.Shared.csproj" />

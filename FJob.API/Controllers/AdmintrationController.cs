@@ -22,10 +22,19 @@ public class AdmintrationController : ControllerBase
         this._roleManager = roleManager;
     }
 
+
     [Authorize(Roles = RoleConst.SUPERVISOR)]
     [HttpGet]
     [Route("User/GetAllUsers")]
     public async Task<IActionResult> GetAllUsers() => Ok((await _userManager.Users.ToListAsync()).ConvertToDTO());
+
+
+    [HttpGet("User/GetUserById{Id:Guid}")]
+    public async Task<IActionResult> GetUserById(Guid Id)
+    {
+        User user = await _userManager.FindByIdAsync(Convert.ToString(Id));
+        return (user == null) ? NotFound() : Ok(user.ConvertToDTO());
+    }
 
 
     [HttpGet]
@@ -42,6 +51,7 @@ public class AdmintrationController : ControllerBase
         });
 
     }
+
 
     [Authorize(Roles = RoleConst.SUPERVISOR)]
     [HttpPost]
@@ -80,6 +90,7 @@ public class AdmintrationController : ControllerBase
         }
     }
 
+
     [Authorize(Roles = RoleConst.SUPERVISOR)]
     [HttpPut]
     [Route("User/AddRoleToUser")]
@@ -115,6 +126,7 @@ public class AdmintrationController : ControllerBase
             return BadRequest(ex.Message);
         }
     }
+
 
     [Authorize(Roles = RoleConst.ADMIN)]
     [HttpDelete]

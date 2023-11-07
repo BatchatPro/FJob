@@ -29,6 +29,7 @@ public class AccessController : Controller
             return BadRequest("Model state isn't valid.");
 
         User user = await _userManager.FindByNameAsync(loginModel.UserName);
+
         if(user != null && await _userManager.CheckPasswordAsync(user, loginModel.Password))
         {
             IEnumerable<string> roles = await _userManager.GetRolesAsync(user);

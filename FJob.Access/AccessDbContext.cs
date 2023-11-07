@@ -1,5 +1,4 @@
 ﻿using FJob.Access.Models;
-using FJob.Access.Models.RepositoryReferences;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 

@@ -22,7 +22,6 @@ builder.Services.AddDbContext<AccessDbContext>(option => option.UseNpgsql(connec
 builder.Services.AddDbContext<FJobDbContext>(option => option.UseNpgsql(connectionString));
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddIdentity<User, Role>(option =>
@@ -64,6 +63,7 @@ builder.Services.AddSwaggerGen(option =>
         }
     });
 });
+
 
 builder.Services.AddAuthentication(options =>
 {

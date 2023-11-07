@@ -44,7 +44,7 @@ public static class MapperExtension
         };
     }
 
-    public static IEnumerable<UserDTO> ConvertToDTO(this IEnumerable<UserDTO> users) =>
+    public static IEnumerable<UserDTO> ConvertToDTO(this IEnumerable<User> users) =>
         users.Select(user => new UserDTO
         {
             Id = user.Id,
@@ -59,7 +59,7 @@ public static class MapperExtension
             Gender = user.Gender
         });
 
-    public static IEnumerable<User> ConvertToDTO(this IEnumerable<User> users) =>
+    public static IEnumerable<User> ConvertToEntity(this IEnumerable<UserDTO> users) =>
         users.Select(user => new User()
         {
             Id = user.Id,

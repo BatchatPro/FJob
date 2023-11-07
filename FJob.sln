@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33617.297
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FJob.Domain", "FJob.Domain\FJob.Domain.csproj", "{D7463566-8242-4C09-A853-E5395697574E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FJob.Domain", "FJob.Domain\FJob.Domain.csproj", "{D7463566-8242-4C09-A853-E5395697574E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FJob.Access", "FJob.Access\FJob.Access.csproj", "{5039D983-2A5E-4B3D-89AE-C51554A6CC7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FJob.Access", "FJob.Access\FJob.Access.csproj", "{5039D983-2A5E-4B3D-89AE-C51554A6CC7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FJob.Repository", "FJob.Repository\FJob.Repository.csproj", "{32968A94-C92F-483D-BCAE-FBD3CF723E80}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FJob.Repository", "FJob.Repository\FJob.Repository.csproj", "{32968A94-C92F-483D-BCAE-FBD3CF723E80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FJob.Shared", "FJob.Shared\FJob.Shared.csproj", "{EBB77762-D45E-4567-9666-575DE27875C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FJob.Shared", "FJob.Shared\FJob.Shared.csproj", "{EBB77762-D45E-4567-9666-575DE27875C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FJob.Service", "FJob.Service\FJob.Service.csproj", "{6D81A26F-E229-4DE2-A39E-9F5A5F1D0CFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FJob.Service", "FJob.Service\FJob.Service.csproj", "{6D81A26F-E229-4DE2-A39E-9F5A5F1D0CFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FJob.API", "FJob.API\FJob.API.csproj", "{54B755E8-E7B6-4E23-AFF9-0B641810C179}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FJob.API", "FJob.API\FJob.API.csproj", "{54B755E8-E7B6-4E23-AFF9-0B641810C179}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FJOB.Infrastructure", "FJOB.Infrastructure\FJOB.Infrastructure.csproj", "{93521A23-792C-48FB-B981-BC38C795CEE1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{54B755E8-E7B6-4E23-AFF9-0B641810C179}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54B755E8-E7B6-4E23-AFF9-0B641810C179}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54B755E8-E7B6-4E23-AFF9-0B641810C179}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93521A23-792C-48FB-B981-BC38C795CEE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93521A23-792C-48FB-B981-BC38C795CEE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93521A23-792C-48FB-B981-BC38C795CEE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93521A23-792C-48FB-B981-BC38C795CEE1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
